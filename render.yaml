@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: game-pocket
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: node server.js
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: ADMIN_PASSCODE
+        generateValue: true
