@@ -1,0 +1,13 @@
+{
+  "name": "game-pocket",
+  "version": "1.0.0",
+  "description": "教室のミニゲームをまとめて管理・配布するハブ",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
