@@ -7,8 +7,8 @@
     "teacherUrl": "https://do-you-like-game.onrender.com/teacher",
     "tvUrl": "https://do-you-like-game.onrender.com/tv",
     "note": "教室内リアルタイム連携版",
-    "grade": "",
-    "manual": "",
+    "grade": "小学3・4年生",
+    "manual": "「Do you like...?」と英語で尋ね合い、好き嫌いを伝え合う教室内リアルタイム連携型の英語クイズゲームです。先生用ダッシュボードで進行し、TV画面に問題や結果を映しながら、生徒はタブレット・PCから回答します。",
     "images": [],
     "addedAt": 1783903000000
   }
