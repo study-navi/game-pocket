@@ -559,7 +559,7 @@ function render(){
         (g.grade ? '<div class="grade-badge">🏫 ' + escapeHtml(g.grade) + '</div>' : '') +
       '</div>' +
       '<button type="button" class="manual-btn">📖 説明書</button>';
-    card.querySelector('.card-body').onclick = function(){ openDetail(g); };
+    card.querySelector('.card-body').onclick = function(){ if(g.studentUrl){ openDetail(g); } else { openManual(g); } };
     card.querySelector('.manual-btn').onclick = function(e){ e.stopPropagation(); openManual(g); };
     grid.appendChild(card);
   });
@@ -585,8 +585,10 @@ window.copyText = copyText;
 
 function openDetail(g){
   var qrHtml = '<div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin:16px 0 8px">' +
+    (g.studentUrl ?
     '<div style="text-align:center"><img src="' + qrUrl(g.studentUrl) + '" alt="生徒用QRコード" style="width:150px;height:150px;border:6px solid #f8fafc;border-radius:10px;">' +
-      '<div style="color:#94a3b8;font-size:12px;margin-top:6px">生徒用</div></div>' +
+      '<div style="color:#94a3b8;font-size:12px;margin-top:6px">生徒用</div></div>'
+      : '') +
     (g.teacherUrl ?
       '<div style="text-align:center"><img src="' + qrUrl(g.teacherUrl) + '" alt="先生用QRコード" style="width:150px;height:150px;border:6px solid #f8fafc;border-radius:10px;">' +
         '<div style="color:#94a3b8;font-size:12px;margin-top:6px">先生用</div></div>'
